@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+   db:
+      image: jacobalberty/firebird:3.0.6
+      ports:
+       - '30500:3050'
+      environment:
+        ISC_PASSWORD: masterkey
+        FIREBIRD_DATABASE: BD2
+        FIREBIRD_USER: BD2
+        FIREBIRD_PASSWORD: masterkey
+        EnableWireCrypt: "true"
+        EnableLegacyClientAuth: "true"
