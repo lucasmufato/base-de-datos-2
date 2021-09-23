@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+   db:
+      image: webgoat/goatandwolf:v8.2.2
+      ports:
+       - '80:8888'
+       - '8080:8080'
+       - '9090:9090'
+      environment:
+        TZ: America/Argentina/Buenos_Aires
+
