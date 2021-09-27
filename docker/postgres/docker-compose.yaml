@@ -10,7 +10,7 @@ services:
       - "5470:5432"
 
   pgadmin:
-    container_name: pgadmin_container
+    container_name: pgadmin
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: bd2@bd2.com

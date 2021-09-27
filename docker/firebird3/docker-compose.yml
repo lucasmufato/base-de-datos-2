@@ -1,8 +1,8 @@
 version: '3.2'
 
 services:
-   db:
-      image: jacobalberty/firebird:3.0.6
+   fb2:
+      image: jacobalberty/firebird:v2.5.9-ss
       ports:
        - '30500:3050'
       environment:
@@ -12,3 +12,27 @@ services:
         FIREBIRD_PASSWORD: masterkey
         EnableWireCrypt: "true"
         EnableLegacyClientAuth: "true"
+
+   fb3:
+      image: jacobalberty/firebird:3.0.7
+      ports:
+       - '30501:3050'
+      environment:
+        ISC_PASSWORD: masterkey
+        FIREBIRD_DATABASE: BD2
+        FIREBIRD_USER: BD2
+        FIREBIRD_PASSWORD: masterkey
+        EnableWireCrypt: "true"
+        EnableLegacyClientAuth: "true"
+
+   # fb4:
+   #    image: jacobalberty/firebird:v4.0.0
+   #    ports:
+   #     - '30501:3050'
+   #    environment:
+   #      ISC_PASSWORD: masterkey
+   #      FIREBIRD_DATABASE: BD2
+   #      FIREBIRD_USER: BD2
+   #      FIREBIRD_PASSWORD: masterkey
+   #      EnableWireCrypt: "true"
+   #      EnableLegacyClientAuth: "true"

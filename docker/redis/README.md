@@ -2,10 +2,13 @@
 
 Para levantar el entorno
 
-```docker-compose up```
+```docker-compose up -d```
 Al correr el comando deberia mostrar varias lineas, terminando con:
-```redis-commander    | Redis Connection redis:6379 using Redis DB #0```
-
+```
+Creating redis-commander-bd2 ... done
+Creating redis-bd2           ... done
+```
+Y se devuelve el control en la terminal.
 
 La base de datos queda en el puerto 6379 adentro del docker.
 Para acceder desde afuera, se debe utilizar el puerto 16379.

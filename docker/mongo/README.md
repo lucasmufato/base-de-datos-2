@@ -12,7 +12,7 @@ Para levantar los servicios ejecutar(en la carpeta donde esta el docker-compose.
 docker-compose up -d
 ´´´
 
-Para deterlos ejecutar:
+Para eliminarlos ejecutar:
 ´´´
 docker-compose down
 ´´´
