@@ -7,12 +7,14 @@ La GUI expone el puerto 8081
 
 ## Ejecucion
 
-Para levantar los servicios ejecutar(en la carpeta donde esta el docker-compose.yml) :
+Para levantar los servicios ejecutar(en la carpeta donde esta el docker-compose.yml):
+
 ´´´
 docker-compose up -d
 ´´´
 
 Para eliminarlos ejecutar:
+
 ´´´
 docker-compose down
 ´´´
@@ -22,10 +24,11 @@ docker-compose down
 Para usar mongo shell debe estar el servicio levantado y entramos al mismo usa 
 
 ´´´
-docker exec -it mongo-4.4_db  bash
+docker exec -it mongo-5.0_db  bash
 ´´´
 
 Una ves dentro de contenedor ejecutar mongo con los parametros de conexion:
+
 ´´´
 mongo -u root -p masterkey
 ´´´
