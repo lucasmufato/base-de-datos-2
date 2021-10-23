@@ -45,7 +45,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.lucasmufato.bd2.App</mainClass>
+              <mainClass>com.lucasmufato.bd2.switchserver.App</mainClass>
             </manifest>
           </archive>
         </configuration>

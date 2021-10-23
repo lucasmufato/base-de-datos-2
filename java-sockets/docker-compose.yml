@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  db:
+    container_name: postgresDB
+    image: postgres:14.0
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5470:5432"
+
+  pgadmin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4:6.1
+    environment:
+      PGADMIN_DEFAULT_EMAIL: bd2@bd2.com
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    ports:
+      - "7070:80"

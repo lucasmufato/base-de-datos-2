@@ -1,7 +1,7 @@
-package com.lucasmufato.bd2;
+package com.lucasmufato.bd2.switchserver;
 
-import com.lucasmufato.bd2.client.Cliente;
-import com.lucasmufato.bd2.server.Servidor;
+import com.lucasmufato.bd2.switchserver.client.Cliente;
+import com.lucasmufato.bd2.switchserver.server.Servidor;
 import java.util.Scanner;
 
 public class App{
