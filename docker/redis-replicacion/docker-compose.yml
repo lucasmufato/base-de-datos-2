@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:6.2.5
+    container_name: master
+    ports:
+      - "16379:6379"
+    networks:
+      - redis-replication
+
+  redis-slave-1:
+    image: redis:6.2.5
+    container_name: slave-1
+    ports:
+      - "6378:6379"
+    command: redis-server --slaveof master 6379
+    depends_on:
+      - redis
+    networks:
+      - redis-replication
+
+  redis-slave-2:
+    image: redis:6.2.5
+    container_name: slave-2
+    ports:
+      - "6377:6379"
+    command: redis-server --slaveof master 6379
+    depends_on:
+      - redis
+    networks:
+      - redis-replication
+
+  redis-commander:
+    container_name: redis-commander-bd2
+    hostname: redis-commander
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8881:8081"
+    networks:
+      - redis-replication
+
+
+networks:
+  redis-replication:
+    driver: bridge
