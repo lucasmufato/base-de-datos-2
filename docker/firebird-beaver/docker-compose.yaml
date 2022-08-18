@@ -1,0 +1,23 @@
+version: '3.2'
+
+services:
+  fb3:
+    image: jacobalberty/firebird:3.0.7
+    ports:
+      - '30501:3050'
+    volumes:
+      - ./fb_data:/firebird/data
+    environment:
+      ISC_PASSWORD: masterkey
+      FIREBIRD_DATABASE: BD2
+      FIREBIRD_USER: BD2
+      FIREBIRD_PASSWORD: masterkey
+      EnableWireCrypt: "true"
+      EnableLegacyClientAuth: "true"
+
+  beaver:
+    image: dbeaver/cloudbeaver:22.1.4
+    ports:
+     - '8978:8978'
+    volumes:
+      - ./beaver:/opt/cloudbeaver/workspace
