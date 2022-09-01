@@ -1,0 +1,20 @@
+version: '3.2'
+
+services:
+
+  db:
+    image: mariadb:10.9
+    ports:
+      - '33060:3306'
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: masterkey
+      MARIADB_DATABASE: bd2
+      MARIADB_USER: bd2
+      MARIADB_PASSWORD: bd2
+
+  adminer:
+    image: adminer:4.8.1
+    ports:
+      - 8888:8080

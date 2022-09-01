@@ -19,3 +19,10 @@ En connection manager hacer una conexion nueva con el driver de firebird, comple
 - Database: /firebird/data/BD2
 - User name: SYSDBA
 - Password: masterkey 
+
+
+## Conexion remota a la VM
+
+Ejecutar:
+
+ssh -p2244 -L 8978:localhost:8978 bdd@bd2.my.to
